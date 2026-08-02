@@ -118,13 +118,3 @@ This project has three parts that need to be configured together — see the set
 1. **Firebase project** — App Check (Play Integrity + Debug providers), linked to the same Google Cloud project used below
 2. **Cloud Function** — deploy `cloud_function/` to Google Cloud (gen2, Python 3.11); requires `--cpu-boost` to avoid cold-start timeouts on TensorFlow's import
 3. **Android app** — needs `google-services.json` from your Firebase project, and an OAuth Android client (with your debug *and* release SHA-1 fingerprints registered) for Drive Sign-In
-
----
-
-## License
-
-*(add your chosen license here — MIT is a common default for a project like this)*
-
-## Contributing
-
-*(add contribution guidelines here if you're opening this up to others)*
