@@ -1,0 +1,80 @@
+<resources>
+    <string name="app_name">Noti Filter</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- Nav header -->
+    <string name="nav_header_tagline">AI-powered notification filter</string>
+
+    <!-- Home dashboard -->
+    <string name="title_home">Dashboard</string>
+    <string name="section_setup">Setup</string>
+    <string name="section_data">Data &amp; export</string>
+    <string name="action_give_permission_title">Notification access</string>
+    <string name="action_give_permission_subtitle">Grant access so the app can read incoming notifications</string>
+    <string name="action_start_service_title">Background service</string>
+    <string name="action_start_service_subtitle">Keep the listener running so nothing is missed</string>
+    <string name="action_export_csv_title">Export raw dataset</string>
+    <string name="action_export_csv_subtitle">Share the collected notification data as CSV</string>
+    <string name="action_export_predicted_title">Export AI predictions</string>
+    <string name="action_export_predicted_subtitle">Share the model\'s predicted labels as CSV</string>
+    <string name="action_sync_drive_title">Connect Drive</string>
+    <string name="action_sync_drive_subtitle_signed_out">Connect your Drive so weekly training can run automatically</string>
+    <string name="action_sync_drive_subtitle_signed_in">Connected — weekly training runs automatically</string>
+    <string name="action_sync_drive_subtitle_uploading">Uploading…</string>
+    <string name="action_sync_drive_subtitle_done">Uploaded just now</string>
+    <string name="action_sync_drive_subtitle_failed">Upload failed — tap to retry</string>
+
+    <!-- Notification list -->
+    <string name="title_notifications">Notifications</string>
+    <string name="chip_today">Today</string>
+    <string name="chip_yesterday">Yesterday</string>
+    <string name="chip_high_priority">High priority</string>
+    <string name="chip_ignored">Ignored</string>
+    <string name="chip_important">Important</string>
+    <string name="chip_clear">Clear</string>
+    <string name="empty_notifications_title">No notifications yet</string>
+    <string name="empty_notifications_subtitle">Notifications you receive will show up here once collected</string>
+
+    <!-- Notification detail -->
+    <string name="title_notification_detail">Notification details</string>
+    <string name="label_sender">Sender</string>
+    <string name="label_category">Category</string>
+    <string name="label_priority">Priority</string>
+    <string name="label_action_taken">Action taken</string>
+    <string name="label_hour">Hour</string>
+    <string name="label_day">Day</string>
+    <string name="label_app">App</string>
+    <string name="label_type">Type</string>
+    <string name="label_time_to_interact">Time to interact</string>
+    <string name="label_post_time">Posted at</string>
+    <string name="label_importance">Importance</string>
+    <string name="action_open">Open</string>
+    <string name="section_details">Details</string>
+    <string name="value_placeholder">—</string>
+
+    <!-- Important things -->
+    <string name="title_important_things">Important things</string>
+    <string name="label_important_contacts">Important contacts</string>
+    <string name="desc_important_contacts">Contacts starred as favorites in your Contacts app are treated as important senders.</string>
+    <string name="desc_important_contacts_hint">To change this list, edit your Favorites in the Contacts app.</string>
+    <string name="label_important_text">Important keywords</string>
+    <string name="action_add_text">Add keyword</string>
+    <string name="hint_add_text">Enter a keyword or phrase</string>
+
+    <!-- Select apps -->
+    <string name="title_select_apps">Excluded apps</string>
+    <string name="desc_select_apps">Select apps you don\'t want the AI model to analyze.</string>
+    <string name="label_app_name_header">App</string>
+    <string name="label_exclude_header">Exclude</string>
+    <string name="action_save_selected_apps">Save selection</string>
+
+    <!-- Profile -->
+    <string name="title_settings">Settings</string>
+
+    <!-- Content descriptions -->
+    <string name="cd_app_icon">App icon</string>
+    <string name="cd_back">Navigate back</string>
+    <string name="cd_expand">Expand section</string>
+    <string name="cd_profile_picture">Profile picture</string>
+</resources>

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        style="@style/Widget.App.Toolbar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:elevation="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_arrow_back"
+        app:navigationIconTint="@color/textPrimary"
+        app:title="@string/title_notification_detail" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Header card: app icon, title, body, open action -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.App.CardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="top"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:background="@drawable/bg_icon_container">
+
+                            <ImageView
+                                android:id="@+id/appIconDetail"
+                                android:layout_width="28dp"
+                                android:layout_height="28dp"
+                                android:layout_gravity="center"
+                                android:contentDescription="@string/cd_app_icon"
+                                android:src="@drawable/ic_app_placeholder"
+                                app:tint="@color/colorOnPrimaryContainer" />
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/title"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Title"
+                                android:textColor="@color/textPrimary"
+                                android:textSize="17sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/body"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="Body"
+                                android:textColor="@color/textSecondary"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/open_notification"
+                        style="@style/Widget.App.Button.Outlined"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/action_open"
+                        app:icon="@drawable/ic_open_in_new" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Details -->
+            <TextView
+                style="@style/TextAppearance.App.SectionHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/section_details" />
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.App.CardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="4dp">
+
+                    <!-- Sender -->
+                    <LinearLayout style="@style/DetailRow">
+                        <TextView style="@style/DetailRow.LabelText" android:text="@string/label_sender" />
+                        <TextView android:id="@+id/sender" style="@style/DetailRow.ValueText" />
+                    </LinearLayout>
+                    <View style="@style/DetailRow.Divider" />
+
+                    <!-- Category -->
+                    <LinearLayout style="@style/DetailRow">
+                        <TextView style="@style/DetailRow.LabelText" android:text="@string/label_category" />
+                        <TextView android:id="@+id/category" style="@style/DetailRow.ValueText" />
+                    </LinearLayout>
+                    <View style="@style/DetailRow.Divider" />
+
+                    <!-- Priority -->
+                    <LinearLayout style="@style/DetailRow">
+                        <TextView style="@style/DetailRow.LabelText" android:text="@string/label_priority" />
+                        <TextView android:id="@+id/priority" style="@style/DetailRow.ValueText" />
+                    </LinearLayout>
+                    <View style="@style/DetailRow.Divider" />
+
+                    <!-- Importance / label -->
+                    <LinearLayout style="@style/DetailRow">
+                        <TextView style="@style/DetailRow.LabelText" android:text="@string/label_importance" />
+                        <TextView android:id="@+id/label" style="@style/DetailRow.ValueText" />
+                    </LinearLayout>
+                    <View style="@style/DetailRow.Divider" />
+
+                    <!-- Action taken -->
+                    <LinearLayout style="@style/DetailRow">
+                        <TextView style="@style/DetailRow.LabelText" android:text="@string/label_action_taken" />
+                        <TextView android:id="@+id/action_taken" style="@style/DetailRow.ValueText" />
+                    </LinearLayout>
+                    <View style="@style/DetailRow.Divider" />
+
+                    <!-- App -->
+                    <LinearLayout style="@style/DetailRow">
+                        <TextView style="@style/DetailRow.LabelText" android:text="@string/label_app" />
+                        <TextView android:id="@+id/app" style="@style/DetailRow.ValueText" />
+                    </LinearLayout>
+                    <View style="@style/DetailRow.Divider" />
+
+                    <!-- Type -->
+                    <LinearLayout style="@style/DetailRow">
+                        <TextView style="@style/DetailRow.LabelText" android:text="@string/label_type" />
+                        <TextView android:id="@+id/type" style="@style/DetailRow.ValueText" />
+                    </LinearLayout>
+                    <View style="@style/DetailRow.Divider" />
+
+                    <!-- Hour -->
+                    <LinearLayout style="@style/DetailRow">
+                        <TextView style="@style/DetailRow.LabelText" android:text="@string/label_hour" />
+                        <TextView android:id="@+id/hour" style="@style/DetailRow.ValueText" />
+                    </LinearLayout>
+                    <View style="@style/DetailRow.Divider" />
+
+                    <!-- Day -->
+                    <LinearLayout style="@style/DetailRow">
+                        <TextView style="@style/DetailRow.LabelText" android:text="@string/label_day" />
+                        <TextView android:id="@+id/day" style="@style/DetailRow.ValueText" />
+                    </LinearLayout>
+                    <View style="@style/DetailRow.Divider" />
+
+                    <!-- Time to interact -->
+                    <LinearLayout style="@style/DetailRow">
+                        <TextView style="@style/DetailRow.LabelText" android:text="@string/label_time_to_interact" />
+                        <TextView android:id="@+id/time_to_interact" style="@style/DetailRow.ValueText" />
+                    </LinearLayout>
+                    <View style="@style/DetailRow.Divider" />
+
+                    <!-- Post time -->
+                    <LinearLayout style="@style/DetailRow">
+                        <TextView style="@style/DetailRow.LabelText" android:text="@string/label_post_time" />
+                        <TextView android:id="@+id/postTime" style="@style/DetailRow.ValueText" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

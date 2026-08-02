@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "672526512795",
+    "project_id": "notifilter-503609",
+    "storage_bucket": "notifilter-503609.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:672526512795:android:9002a410fcf719c3dbcc3e",
+        "android_client_info": {
+          "package_name": "com.techy.noti_filter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5MVzZqSzHiSkE5IPLvfS2b9Y59Yc8Kw4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

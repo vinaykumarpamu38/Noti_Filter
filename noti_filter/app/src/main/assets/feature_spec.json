@@ -1,0 +1,103 @@
+{
+  "input_dim": 824,
+  "class_index_to_label": [
+    0,
+    2,
+    3,
+    4
+  ],
+  "label_scheme": "4-class (label 1 merged into label 2)",
+  "tfidf_vocab_size": 800,
+  "tfidf_ngram_range": [
+    1,
+    2
+  ],
+  "text_column": "combined_text = cleaned(title) + ' | ' + cleaned(body)",
+  "text_cleaning_steps": [
+    "lowercase",
+    "strip URLs (http(s)://... and www...)",
+    "replace any char that is not a-z, 0-9, or whitespace with a space",
+    "collapse repeated whitespace and trim"
+  ],
+  "keyword_flags": {
+    "note": "computed on RAW lowercased text (title+body+sender), NOT the cleaned TF-IDF text \u2014 must contain symbols like \u20b9 unmodified, matching the Java label generator exactly",
+    "financial_keywords": [
+      "otp",
+      "credited",
+      "debited",
+      "upi",
+      "bank",
+      "\u20b9",
+      "urgent",
+      "delivery",
+      "call",
+      "verification code",
+      "payment"
+    ],
+    "spam_keywords": [
+      "sale",
+      "offer",
+      "discount",
+      "free",
+      "coupon",
+      "promo",
+      "buy",
+      "price",
+      "get",
+      "off"
+    ]
+  },
+  "categorical_columns_in_order": [
+    "app",
+    "sender",
+    "category",
+    "type"
+  ],
+  "categorical_encoding": "per-category, per-class TargetEncoder score \u2014 see <col>_encoding.json; unseen values MUST fall back to the \"__default__\" entry in that file",
+  "numeric_columns_in_order": [
+    "priority",
+    "hour",
+    "day",
+    "title_len",
+    "body_len",
+    "has_media",
+    "is_financial",
+    "is_spammy"
+  ],
+  "numeric_scaler_mean": [
+    0.48311725316996723,
+    14.366149024077504,
+    4.022795269981478,
+    19.788573870921784,
+    50.145319846131926,
+    0.12352186921213848,
+    0.07479697962672745,
+    0.22994728593816782
+  ],
+  "numeric_scaler_scale": [
+    0.7652844335353473,
+    4.632021160627451,
+    2.0027176562504287,
+    10.180436834829246,
+    63.47736114056381,
+    0.3290352823611441,
+    0.26306347421382237,
+    0.4207986830158079
+  ],
+  "block_layout": {
+    "1_tfidf": {
+      "start": 0,
+      "width": 800
+    },
+    "2_categorical": {
+      "start": 800,
+      "width": 16,
+      "order": "for each column in categorical_columns_in_order, n_classes consecutive values (one per class, in class_index_to_label order)"
+    },
+    "3_numeric": {
+      "start": 816,
+      "width": 8,
+      "note": "each transformed via (x - mean) / scale using numeric_scaler_mean/scale, order = numeric_columns_in_order"
+    }
+  }
+}

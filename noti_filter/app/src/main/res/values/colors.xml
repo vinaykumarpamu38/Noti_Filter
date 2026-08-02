@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- =====================================================
+         Noti Filter — Design Tokens (Light)
+         Brand: modern "AI / smart filtering" indigo + teal
+         Dark-mode overrides live in values-night/colors.xml
+         ===================================================== -->
+
+    <!-- Brand / Primary -->
+    <color name="colorPrimary">#4F46E5</color>
+    <color name="colorPrimaryDark">#4338CA</color>
+    <color name="colorPrimaryContainer">#E4E5FF</color>
+    <color name="colorOnPrimary">#FFFFFF</color>
+    <color name="colorOnPrimaryContainer">#2B2894</color>
+
+    <!-- Secondary / Accent -->
+    <color name="colorSecondary">#0D9488</color>
+    <color name="colorSecondaryContainer">#CCFBF1</color>
+    <color name="colorOnSecondary">#FFFFFF</color>
+    <color name="colorOnSecondaryContainer">#0F3F3B</color>
+
+    <!-- Status / semantic (used for priority indicators, badges) -->
+    <color name="colorSuccess">#16A34A</color>
+    <color name="colorWarning">#F59E0B</color>
+    <color name="colorError">#DC2626</color>
+    <color name="colorInfo">#2563EB</color>
+    <color name="colorNeutralPriority">#9AA1AE</color>
+
+    <!-- Surfaces / backgrounds -->
+    <color name="colorBackground">#F6F7FB</color>
+    <color name="colorSurface">#FFFFFF</color>
+    <color name="colorSurfaceVariant">#EEF0F7</color>
+    <color name="colorSurfaceContainerHigh">#FFFFFF</color>
+    <color name="colorOutline">#E1E4ED</color>
+    <color name="colorOutlineVariant">#ECEEF4</color>
+
+    <!-- Text -->
+    <color name="textPrimary">#14151B</color>
+    <color name="textSecondary">#676D7A</color>
+    <color name="textTertiary">#9AA0AC</color>
+
+    <!-- Misc -->
+    <color name="divider">#ECEEF4</color>
+    <color name="rippleColor">#1F000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
+</resources>

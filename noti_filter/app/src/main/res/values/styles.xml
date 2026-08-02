@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- ============================================================
+         TOOLBAR — neutral surface-toned app bar (M3 style), used on
+         every screen so sub-screens finally get a visible back button.
+         ============================================================ -->
+    <style name="Widget.App.Toolbar" parent="Widget.Material3.Toolbar">
+        <item name="android:background">@color/colorSurface</item>
+        <item name="titleTextColor">@color/textPrimary</item>
+        <item name="subtitleTextColor">@color/textSecondary</item>
+        <item name="titleTextAppearance">@style/TextAppearance.App.ToolbarTitle</item>
+    </style>
+
+    <style name="TextAppearance.App.ToolbarTitle" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:textSize">20sp</item>
+        <item name="fontFamily">@font/roboto</item>
+        <item name="android:fontFamily">@font/roboto</item>
+    </style>
+
+    <!-- ============================================================
+         CARDS — flat, outlined M3 style: subtle border + minimal
+         elevation instead of heavy Material-2 drop shadows.
+         ============================================================ -->
+    <style name="Widget.App.CardView" parent="Widget.Material3.CardView.Outlined">
+        <item name="cardCornerRadius">16dp</item>
+        <item name="cardElevation">0dp</item>
+        <item name="strokeColor">@color/colorOutline</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="cardBackgroundColor">@color/colorSurface</item>
+    </style>
+
+    <!-- ============================================================
+         BUTTONS
+         ============================================================ -->
+    <style name="Widget.App.Button" parent="Widget.Material3.Button">
+        <item name="cornerRadius">14dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:paddingTop">14dp</item>
+        <item name="android:paddingBottom">14dp</item>
+        <item name="iconGravity">textStart</item>
+        <item name="iconPadding">10dp</item>
+    </style>
+
+    <style name="Widget.App.Button.Outlined" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="cornerRadius">14dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="strokeColor">@color/colorOutline</item>
+        <item name="iconGravity">textStart</item>
+        <item name="iconPadding">10dp</item>
+    </style>
+
+    <style name="Widget.App.Button.Text" parent="Widget.Material3.Button.TextButton">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="iconGravity">textStart</item>
+        <item name="iconPadding">8dp</item>
+    </style>
+
+    <!-- ============================================================
+         CHIPS
+         ============================================================ -->
+    <style name="Widget.App.Chip" parent="Widget.Material3.Chip.Filter">
+        <item name="checkedIconVisible">false</item>
+    </style>
+
+    <style name="Widget.App.Chip.Filter">
+        <item name="chipBackgroundColor">@color/chip_background_color</item>
+        <item name="android:textColor">@color/chip_text_color</item>
+        <item name="chipStrokeColor">@color/colorOutline</item>
+        <item name="chipStrokeWidth">1dp</item>
+        <item name="checkedIconVisible">false</item>
+        <item name="rippleColor">@color/colorPrimaryContainer</item>
+    </style>
+
+    <style name="Widget.App.Chip.Action" parent="Widget.Material3.Chip.Assist">
+        <item name="chipBackgroundColor">@color/colorSurfaceVariant</item>
+        <item name="android:textColor">@color/textSecondary</item>
+        <item name="chipIcon">@drawable/ic_close</item>
+        <item name="chipIconTint">@color/textSecondary</item>
+        <item name="chipIconVisible">true</item>
+        <item name="chipStrokeWidth">0dp</item>
+    </style>
+
+    <!-- ============================================================
+         BOTTOM NAVIGATION
+         ============================================================ -->
+    <style name="Widget.App.BottomNavigation" parent="Widget.Material3.BottomNavigationView">
+        <item name="backgroundTint">@color/colorSurface</item>
+        <item name="itemIconTint">@color/bottom_nav_item_color</item>
+        <item name="itemTextColor">@color/bottom_nav_item_color</item>
+        <item name="itemRippleColor">@color/colorPrimaryContainer</item>
+        <item name="itemTextAppearanceActive">@style/TextAppearance.App.BottomNav.Active</item>
+        <item name="itemTextAppearanceInactive">@style/TextAppearance.App.BottomNav.Inactive</item>
+        <item name="elevation">8dp</item>
+        <item name="labelVisibilityMode">labeled</item>
+    </style>
+
+    <style name="TextAppearance.App.BottomNav.Active" parent="TextAppearance.Material3.LabelMedium">
+        <item name="android:textSize">12sp</item>
+        <item name="fontFamily">@font/roboto</item>
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.App.BottomNav.Inactive" parent="TextAppearance.Material3.LabelMedium">
+        <item name="android:textSize">12sp</item>
+        <item name="fontFamily">@font/roboto</item>
+        <item name="android:fontFamily">@font/roboto</item>
+    </style>
+
+    <!-- ============================================================
+         NAVIGATION DRAWER
+         ============================================================ -->
+    <style name="Widget.App.NavigationView" parent="Widget.Material3.NavigationView">
+        <item name="itemIconTint">@color/nav_item_color</item>
+        <item name="itemTextColor">@color/nav_item_color</item>
+        <item name="itemShapeFillColor">@color/colorPrimaryContainer</item>
+        <item name="itemShapeAppearanceOverlay">@style/ShapeAppearance.App.NavItem</item>
+        <item name="itemShapeInsetStart">12dp</item>
+        <item name="itemShapeInsetEnd">12dp</item>
+        <item name="itemShapeInsetTop">4dp</item>
+        <item name="itemShapeInsetBottom">4dp</item>
+        <item name="itemIconPadding">16dp</item>
+        <item name="itemTextAppearance">@style/TextAppearance.App.NavItem</item>
+        <item name="android:background">@color/colorSurface</item>
+    </style>
+
+    <style name="ShapeAppearance.App.NavItem" parent="">
+        <item name="cornerSize">20dp</item>
+    </style>
+
+    <style name="TextAppearance.App.NavItem" parent="TextAppearance.Material3.LabelLarge">
+        <item name="fontFamily">@font/roboto</item>
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <!-- ============================================================
+         DETAIL SCREEN LABEL / VALUE ROWS
+         ============================================================ -->
+    <style name="TextAppearance.App.FieldLabel" parent="TextAppearance.Material3.LabelSmall">
+        <item name="android:textColor">@color/textSecondary</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:letterSpacing">0.04</item>
+        <item name="fontFamily">@font/roboto</item>
+        <item name="android:fontFamily">@font/roboto</item>
+    </style>
+
+    <style name="TextAppearance.App.FieldValue" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:textColor">@color/textPrimary</item>
+        <item name="android:textSize">15sp</item>
+        <item name="fontFamily">@font/roboto</item>
+        <item name="android:fontFamily">@font/roboto</item>
+    </style>
+
+    <!-- Section header caption, e.g. "SETUP", "DATA EXPORT" -->
+    <style name="TextAppearance.App.SectionHeader" parent="TextAppearance.Material3.LabelLarge">
+        <item name="android:textColor">@color/textSecondary</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:letterSpacing">0.08</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="fontFamily">@font/roboto</item>
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Row title / subtitle used in dashboard action rows and list items -->
+    <style name="TextAppearance.App.RowTitle" parent="TextAppearance.Material3.TitleSmall">
+        <item name="android:textColor">@color/textPrimary</item>
+        <item name="fontFamily">@font/roboto</item>
+        <item name="android:fontFamily">@font/roboto</item>
+    </style>
+
+    <style name="TextAppearance.App.RowSubtitle" parent="TextAppearance.Material3.BodySmall">
+        <item name="android:textColor">@color/textSecondary</item>
+        <item name="fontFamily">@font/roboto</item>
+        <item name="android:fontFamily">@font/roboto</item>
+    </style>
+
+    <!-- ============================================================
+         DETAIL SCREEN — label-above-value row used in the notification
+         detail "Details" card (replaces the old single-TextView
+         tab-concatenated "Label: \t value" approach).
+         ============================================================ -->
+    <style name="DetailRow">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:paddingVertical">10dp</item>
+    </style>
+
+    <style name="DetailRow.LabelText" parent="">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAppearance">@style/TextAppearance.App.FieldLabel</item>
+    </style>
+
+    <style name="DetailRow.ValueText" parent="">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">2dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.App.FieldValue</item>
+    </style>
+
+    <style name="DetailRow.Divider" parent="">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/divider</item>
+    </style>
+
+</resources>

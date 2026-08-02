@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- =====================================================
+         Noti Filter — Design Tokens (Dark)
+         Same token names as values/colors.xml; Android swaps
+         these in automatically when the system is in dark mode.
+         ===================================================== -->
+
+    <!-- Brand / Primary -->
+    <color name="colorPrimary">#818CF8</color>
+    <color name="colorPrimaryDark">#6366F1</color>
+    <color name="colorPrimaryContainer">#342F8C</color>
+    <color name="colorOnPrimary">#1E1B4B</color>
+    <color name="colorOnPrimaryContainer">#E4E5FF</color>
+
+    <!-- Secondary / Accent -->
+    <color name="colorSecondary">#2DD4BF</color>
+    <color name="colorSecondaryContainer">#0F4C46</color>
+    <color name="colorOnSecondary">#00332E</color>
+    <color name="colorOnSecondaryContainer">#CCFBF1</color>
+
+    <!-- Status / semantic -->
+    <color name="colorSuccess">#4ADE80</color>
+    <color name="colorWarning">#FBBF24</color>
+    <color name="colorError">#F87171</color>
+    <color name="colorInfo">#60A5FA</color>
+    <color name="colorNeutralPriority">#8A90A0</color>
+
+    <!-- Surfaces / backgrounds -->
+    <color name="colorBackground">#0F1115</color>
+    <color name="colorSurface">#1B1D24</color>
+    <color name="colorSurfaceVariant">#242832</color>
+    <color name="colorSurfaceContainerHigh">#262A34</color>
+    <color name="colorOutline">#34373F</color>
+    <color name="colorOutlineVariant">#2A2D36</color>
+
+    <!-- Text -->
+    <color name="textPrimary">#F2F3F7</color>
+    <color name="textSecondary">#ACB1BE</color>
+    <color name="textTertiary">#7B818F</color>
+
+    <!-- Misc -->
+    <color name="divider">#2A2D36</color>
+    <color name="rippleColor">#33FFFFFF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
+</resources>
